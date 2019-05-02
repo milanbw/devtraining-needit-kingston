@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_flow_snapshot">
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Steps to approve and fulfill NeedIt requests.</description>
+        <label_cache>[{"name":"Created_1.current.u_when_needed","label":"Trigger➛NeedIt Record➛When needed","reference":"","reference_display":"When needed","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_58872_needit_needit","column_name":"u_when_needed"},{"name":"Created_1.current.u_request_type","label":"Trigger➛NeedIt Record➛Request type","reference":"","reference_display":"Request type","type":"choice","base_type":"choice","parent_table_name":"x_58872_needit_needit","column_name":"u_request_type","choices":[{"used":false,"reference":false,"label":"Human Resources","image":"","missing":false,"selected":false,"rawLabel":"Human Resources","value":"hr"},{"used":false,"reference":false,"label":"Facilities","image":"","missing":false,"selected":false,"rawLabel":"Facilities","value":"facilities"},{"used":false,"reference":false,"label":"Legal","image":"","missing":false,"selected":false,"rawLabel":"Legal","value":"legal"}]},{"name":"8a06807c-982c-485e-b780-6860f65cac95.table_name","label":"1➛NeedIt Table","reference":"x_58872_needit_needit","reference_display":"NeedIt Table"},{"name":"8a06807c-982c-485e-b780-6860f65cac95.record","label":"1➛NeedIt Record","reference":"x_58872_needit_needit","reference_display":"NeedIt Record"},{"name":"Created_1.current","label":"Trigger➛NeedIt Record","reference":"x_58872_needit_needit","reference_display":"NeedIt","type":"reference","base_type":"reference"},{"name":"Created_1.current.u_requested_for.manager","label":"Trigger➛NeedIt Record➛Requested for➛Manager","reference":"sys_user","reference_display":"Manager","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"f3825b69-3b8a-445d-8532-8eec772fa0c5.approval_state","label":"2➛Approval State","type":"choice","base_type":"choice"}]</label_cache>
+        <name>NeedIt Fulfillment</name>
+        <parent_flow display_value="NeedIt Fulfillment">78b01d1bdb01330056a658b3ca9619c0</parent_flow>
+        <remote_trigger_id>de676117db41330056a658b3ca9619f5</remote_trigger_id>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>fred.luddy</sys_created_by>
+        <sys_created_on>2019-05-01 19:10:01</sys_created_on>
+        <sys_id>1d8bf1dfdb41330056a658b3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NeedIt Fulfillment</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_hub_flow_snapshot_1d8bf1dfdb41330056a658b3ca9619e2</sys_update_name>
+        <sys_updated_by>fred.luddy</sys_updated_by>
+        <sys_updated_on>2019-05-01 19:10:01</sys_updated_on>
+    </sys_hub_flow_snapshot>
+</record_update>

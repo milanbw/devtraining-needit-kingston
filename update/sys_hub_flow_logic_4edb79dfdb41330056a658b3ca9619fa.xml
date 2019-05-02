@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_flow_logic">
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">af36b11fdb41330056a658b3ca9619d6</block>
+        <connected_to>79f8b66a-3c1d-4351-ba9e-2039cdbf8999</connected_to>
+        <display_text/>
+        <flow display_value="NeedIt Fulfillment">35dbb5dfdb41330056a658b3ca961962</flow>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3.4</order>
+        <parent_ui_id>945f5fe4-3576-44fe-a2ab-99d5bcd2f851</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>fred.luddy</sys_created_by>
+        <sys_created_on>2019-05-01 19:11:26</sys_created_on>
+        <sys_id>4edb79dfdb41330056a658b3ca9619fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_hub_flow_logic_4edb79dfdb41330056a658b3ca9619fa</sys_update_name>
+        <sys_updated_by>fred.luddy</sys_updated_by>
+        <sys_updated_on>2019-05-01 19:11:26</sys_updated_on>
+        <ui_id>ad5dbbc2-2996-463b-b35c-57ee01632316</ui_id>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4edb79dfdb41330056a658b3ca9619fa"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4edb79dfdb41330056a658b3ca9619fa</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>fred.luddy</sys_created_by>
+        <sys_created_on>2019-05-01 19:11:26</sys_created_on>
+        <sys_id>8edb79dfdb41330056a658b3ca9619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>fred.luddy</sys_updated_by>
+        <sys_updated_on>2019-05-01 19:11:26</sys_updated_on>
+        <value>Human Resources</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>4edb79dfdb41330056a658b3ca9619fa</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>fred.luddy</sys_created_by>
+        <sys_created_on>2019-05-01 19:11:26</sys_created_on>
+        <sys_id>cadb79dfdb41330056a658b3ca9619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>fred.luddy</sys_updated_by>
+        <sys_updated_on>2019-05-01 19:11:26</sys_updated_on>
+        <value>{{Created_1.current.u_request_type}}=hr</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea1</variable>
+    </sys_variable_value>
+</record_update>
