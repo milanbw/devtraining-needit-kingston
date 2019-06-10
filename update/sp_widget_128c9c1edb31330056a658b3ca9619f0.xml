@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.sp-tagline-color {
+	color: $sp-tagline-color;
+}
+
+.userName {
+	font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .wrapper-xl {
+  	padding: 0px !important;
+  }
+  #homepage-search {
+  	padding: 10px 10px 30px 10px !important;
+  }
+  h1 {
+    font-size: 2em !important;
+  }
+  
+  h2{
+  	font-size: 2em !important;
+  }
+}​</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>title,short_description</field_list>
+        <has_preview>true</has_preview>
+        <id>wf1_homepage_search</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>WF1 Homepage Search</name>
+        <option_schema>[{"name":"typeahead_search","default_value":"{title: 'How can we help?', size: 'lg', color: 'default'}","section":"Presentation","label":"Typeahead Search","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[data.typeAheadSearch = $sp.getWidget('wf1-typehead-search', options.typeahead_search);
+data.user = gs.getUserName();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-04 16:28:11</sys_created_on>
+        <sys_id>128c9c1edb31330056a658b3ca9619f0</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>WF1 Homepage Search</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sp_widget_128c9c1edb31330056a658b3ca9619f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 22:48:49</sys_updated_on>
+        <template><![CDATA[<div id="homepage-search" class="wrapper-xl widget-container">
+  <div class="wrapper-xl">
+    <h2 class="text-center text-4x m-b-lg sp-tagline-color">Hi <span class="userName">{{data.user}}</span>, how can we help?</h2>
+  	<div ng-if="options.short_description" class="text-center h4 m-b-lg sp-tagline-color" ng-bind="options.short_description"></div>
+  	<sp-widget widget="data.typeAheadSearch" />
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

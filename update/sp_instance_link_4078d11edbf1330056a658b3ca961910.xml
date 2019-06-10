@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description>Contact support to make a request, or report a problem</short_description>
+        <size>md</size>
+        <sp_column display_value="3">52b12016db71330056a658b3ca961996</sp_column>
+        <sp_page/>
+        <sp_widget display_value="WF1 Icon Link">6aa23412dbb1330056a658b3ca9619fd</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-04 20:49:54</sys_created_on>
+        <sys_id>4078d11edbf1330056a658b3ca961910</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Get help</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sp_instance_link_4078d11edbf1330056a658b3ca961910</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-04 20:54:30</sys_updated_on>
+        <title>Get help</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	},
+	"image": {
+		"value": "getHelp.svg",
+		"displayValue": "getHelp.svg"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=4078d11edbf1330056a658b3ca961910"/>
+</record_update>

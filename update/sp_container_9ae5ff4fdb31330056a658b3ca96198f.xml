@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image>6cbeafc7db31330056a658b3ca961923</background_image>
+        <background_style>cover</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Copy of Demo WF 1 (1) - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="copy_of_demo_wf_1_1">16e5ff4fdb31330056a658b3ca96198d</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 16:13:21</sys_created_on>
+        <sys_id>9ae5ff4fdb31330056a658b3ca96198f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Demo WF 1 (1) - Container 1</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sp_container_9ae5ff4fdb31330056a658b3ca96198f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 16:13:21</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

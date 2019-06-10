@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.transclude:last-child {
+  padding-bottom: 10px;
+}
+
+.list-group {
+ 	margin-bottom: 0px; 
+}
+
+.list-group-item {
+    padding: 0;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 0px;
+}
+
+.list-group-item:last-child {
+	margin-bottom: 0px;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .panel-body .list-group .list-group-item .glyphicon-star {
+    color: windowText !important;
+  }
+}
+
+.kb-star-on {
+  color: $fav-star-color !important;
+  text-shadow: $fav-star-outline;
+  
+}
+
+.kb-star-off {
+  color: $fav-star-color-off !important;
+  text-shadow: $fav-star-outline;
+}
+
+.panel{
+  border-radius: 20px;
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.1) !important;
+}
+
+.panel-default &gt; .panel-heading {
+ 	background-color: white;
+  border-bottom: none;
+  border-radius: 20px;
+}
+
+.fa{
+	color: yellow !important;
+}
+
+h2 {
+	font-weight: bold;
+  font-size: x-large;
+  padding: 5px 0 5px 0;
+}
+
+#borderBottom {
+  border-bottom: $border-color;
+  width: 30%;
+  margin-left: 15px;
+}
+
+li:nth-child(even) { 
+  background: white; 
+  padding: 5px;
+}
+
+li:nth-child(odd) { 
+  background: #e6e6e6;
+  padding: 5px; 
+}
+
+a{
+	color: $link-color;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>title,color,glyph</field_list>
+        <has_preview>true</has_preview>
+        <id>wf1_kb_top_rated</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>WF1 KB Top Rated</name>
+        <option_schema>[{"name":"max_number","section":"Presentation","label":"Max number","type":"integer"},{"displayValue":"Knowledge Category","name":"kb_category","section":"Data","label":"KB category","type":"reference","value":"kb_category","ed":{"reference":"kb_category"}}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.articles = [];
+	options.title = options.title || gs.getMessage("Top Rated Articles");
+	
+	var z;
+	var knowledge_bases;
+	var article_id = $sp.getParameter('sys_id');
+	var kb_id = $sp.getParameter('kb_id');
+	
+	if (article_id != null){  /* On the Article page, get KB of the article */
+		var gr = new GlideRecord("kb_knowledge");
+		if (gr.get(article_id)){
+			knowledge_bases = String(gr.getValue('kb_knowledge_base'));
+		} else /* return for an invalid article id */
+			return;
+		
+	} else {/* For all other pages this code will get executed. Used on knowledge home page.*/
+		
+		/*If KB is selected display top rated articles only from that KB*/
+		if (kb_id != null)
+			knowledge_bases = String(kb_id);
+		else {
+			/*Get all knowledge bases associated with Portal*/
+			knowledge_bases = String($sp.getKnowledgeBases());
+		}
+	}
+	
+	if (knowledge_bases)
+		z = $sp.getAllKBRecords(knowledge_bases);
+	else //If there are no accessible KBs for logged in user
+		return;
+	
+	z.addQuery("rating", ">", "0");
+	if (options.kb_category)
+		z.addQuery("kb_category", options.kb_category);
+	z.orderByDesc('rating');
+	z.setLimit(options.max_number || 5);
+	z.query();
+	while (z.next()) {
+		if (!z.canRead())
+			continue;
+
+		var a = {};
+		$sp.getRecordValues(a, z, 'short_description,sys_view_count,sys_id,published,rating');
+		a.published_display = z.getDisplayValue("published");
+		data.articles.push(a);
+	}
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-04 21:18:49</sys_created_on>
+        <sys_id>370f5d52db35330056a658b3ca9619a2</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>WF1 KB Top Rated</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sp_widget_370f5d52db35330056a658b3ca9619a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-07 18:58:29</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-{{options.color}} b" ng-if="::(data.articles.length > 0)">
+  <div class="panel-heading"> <h2 class="h4 panel-title" ng-bind="::options.title">
+    <fa ng-if="::options.glyph.length" name="::{{options.glyph}}" class="m-r-sm" /></h2>
+  </div>
+  <div id="borderBottom">
+  </div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="a in ::data.articles">
+        <a href="?id=kb_article&sys_id={{::a.sys_id}}">{{::a.short_description}}</a>
+        <div>
+          <span uib-rating sp-rating ng-model="::a.rating" max="5" readonly="true" aria-label="${Article rating} - ${Read Only}" state-on="'fa fa-star kb-star-on'" state-off="'fa fa-star kb-star-off'" />
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

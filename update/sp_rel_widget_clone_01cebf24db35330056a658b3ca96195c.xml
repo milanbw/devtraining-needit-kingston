@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="INSERT_OR_UPDATE">
+        <child display_value="Demo Footer-Instance Security Center">c1cebf24db35330056a658b3ca961959</child>
+        <cloned>2019-05-30 22:27:14</cloned>
+        <last_validated>2019-05-30 22:27:14</last_validated>
+        <parent display_value="Footer-Instance Security Center">30817eda53502300a699ddeeff7b1215</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.isc-footer{&amp;#13;
+	background-color:#293D40;&amp;#13;
+  	padding:5px;&amp;#13;
+    color:white;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.isc-footer a:hover{&amp;#13;
+	color:white;&amp;#13;
+    cursor:pointer;&amp;#13;
+}&amp;#13;
+.isc-footer a:visited{&amp;#13;
+	color:white;&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Footer-Instance Security Center&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles&gt;admin,security_dashboard_user&lt;/roles&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_header_footer&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-09-04 17:35:58&lt;/sys_created_on&gt;&lt;sys_id&gt;30817eda53502300a699ddeeff7b1215&lt;/sys_id&gt;&lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;&lt;sys_name&gt;Footer-Instance Security Center&lt;/sys_name&gt;&lt;sys_package display_value="Instance Security Center" source="com.glide.instance_sec_center"&gt;4af648e3db11330056a658b3ca961935&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_header_footer_30817eda53502300a699ddeeff7b1215&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-10-26 17:16:26&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="container-fluid isc-footer"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-6"&gt;
+      ${© 2018 ServiceNow, Inc. All rights reserved.}
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-30 22:27:14</sys_created_on>
+        <sys_id>01cebf24db35330056a658b3ca96195c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c1cebf24db35330056a658b3ca961959</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_01cebf24db35330056a658b3ca96195c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-30 22:27:14</sys_updated_on>
+    </sp_rel_widget_clone>
+</record_update>
