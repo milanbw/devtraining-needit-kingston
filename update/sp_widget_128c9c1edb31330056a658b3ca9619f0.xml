@@ -3,13 +3,13 @@
         <category>custom</category>
         <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
         <controller_as>c</controller_as>
-        <css>.sp-tagline-color {
-	color: $sp-tagline-color;
-}
-
-.userName {
+        <css>.userName {
 	font-weight: bold;
   color: white;
+}
+
+#homepage-search{
+	overflow-x: hidden;
 }
 
 @media (max-width: 600px) {
@@ -26,7 +26,17 @@
   h2{
   	font-size: 2em !important;
   }
-}​</css>
+  
+  .sp-tagline-color {
+    color: black;
+  }
+}
+
+@media (min-width: 600px) {
+  .sp-tagline-color {
+    color: $sp-tagline-color;
+  }
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -47,17 +57,22 @@ data.user = gs.getUserName();]]></script>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-04 16:28:11</sys_created_on>
         <sys_id>128c9c1edb31330056a658b3ca9619f0</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>WF1 Homepage Search</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sp_widget_128c9c1edb31330056a658b3ca9619f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-07 22:48:49</sys_updated_on>
+        <sys_updated_on>2019-06-10 20:52:14</sys_updated_on>
         <template><![CDATA[<div id="homepage-search" class="wrapper-xl widget-container">
   <div class="wrapper-xl">
-    <h2 class="text-center text-4x m-b-lg sp-tagline-color">Hi <span class="userName">{{data.user}}</span>, how can we help?</h2>
+    <div class="hidden visible-xs">
+      <br>
+      <br>
+      <br>
+    </div>
+    <h2 class="text-center text-3x m-b-lg sp-tagline-color">Hi <span class="userName">{{data.user}}</span>, how can we help?</h2>
   	<div ng-if="options.short_description" class="text-center h4 m-b-lg sp-tagline-color" ng-bind="options.short_description"></div>
   	<sp-widget widget="data.typeAheadSearch" />
   </div>

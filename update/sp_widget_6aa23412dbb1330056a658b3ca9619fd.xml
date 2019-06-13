@@ -6,10 +6,23 @@
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>.iconlink {
-  position: relative;
-  top: -40px;
-  background: white;
-  border-radius: 20px;
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.1) !important;
+	}
+
+@media only screen and (max-width: 600px) {
+  .iconlink {
+    top: -20px;
+    margin-bottom: 15px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+  .iconlink {
+    top: -40px;
+  }
 }
 
 .iconlink a label,h2 {
@@ -171,14 +184,14 @@ a.top_icon .fa {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-04 18:04:52</sys_created_on>
         <sys_id>6aa23412dbb1330056a658b3ca9619fd</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>WF1 Icon Link</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sp_widget_6aa23412dbb1330056a658b3ca9619fd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-07 17:15:38</sys_updated_on>
+        <sys_updated_on>2019-06-11 21:25:17</sys_updated_on>
         <template><![CDATA[<div class="iconlink" ng-class="{'high-contrast': accessibilityModeEnabled}">
   <!--// Top Icon -->
   <a ng-if="::(options.link_template == 'Top Icon' || !options.link_template)" ng-href="{{::data.href}}" class="top_icon {{::options.class_name}}" target="{{::data.target}}">
